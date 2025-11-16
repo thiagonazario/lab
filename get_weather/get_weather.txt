@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# ==================================
+# 1. VARIÁVEIS DE CONFIGURAÇÃO
+# ==================================
+
+# Substitua "Porto Alegre" pela cidade desejada.
+LOCATION="Porto Alegre" 
+
+# O código "2" no final da URL significa:
+# - Previsão de 2 dias (Hoje e Amanhã)
+# - O código ":0" é removido, pois queremos a previsão estendida.
+# - lang=pt-br: Retorna o texto em Português.
+WEATHER_URL="wttr.in/${LOCATION}?lang=pt-br&2" 
+
+# ==================================
+# 2. FUNÇÃO DE OBTENÇÃO DA PREVISÃO
+# ==================================
+
+function get_weather() {
+    echo "--- Previsão do Tempo para ${LOCATION} ---"
+    echo "Buscando dados em ${WEATHER_URL/wttr.in\// }..." # Exibe a URL de forma limpa
+
+    # O cURL busca os dados.
+    # O tail -n +5 remove o cabeçalho e as linhas iniciais de informações do wttr.in.
+    # O head -n 12 limita a saída a apenas as previsões de dois dias para manter o script limpo.
+    curl -s "$WEATHER_URL" | tail -n +5 | head -n 12
+
+    if [ $? -ne 0 ]; then
+        echo "❌ Erro ao buscar a previsão. Verifique sua conexão ou se 'curl' está instalado."
+    fi
+    
+    echo "------------------------------------------------"
+}
+
+# ==================================
+# 3. EXECUÇÃO
+# ==================================
+
+get_weather

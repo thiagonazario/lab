@@ -1,0 +1,18 @@
+# Initial RAM Disk
+initrd
+
+# /boot Directory
+/boot
+example: ls -F /boot
+
+# Kernel Ring Buffer
+dmesg
+
+# Systemd
+/lib/systemd/system
+
+# Rebooting
+shutdown -r 15:30 'rebooting!'
+
+# Poweroff
+poweroff
