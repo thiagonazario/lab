@@ -1,0 +1,22 @@
+# return the user account name
+whoami
+
+# super user
+su
+
+# change user
+su - "user_name"
+
+# logout
+exit
+
+# sudo - super user do
+sudo
+
+# commands
+sudo -l # list available commands
+sudo command # run command as root
+sudo -u root command # same as above
+sudo -u user command # run as user
+
+
