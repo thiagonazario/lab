@@ -19,4 +19,5 @@ sudo command # run command as root
 sudo -u root command # same as above
 sudo -u user command # run as user
 
-
+# change the sudo configuration
+visudo # edit the etc/sudoers file
