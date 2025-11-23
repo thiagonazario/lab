@@ -1,0 +1,25 @@
+0 hostname
+   1 git clone https://github.com/spurin/cmatrix.git
+   2 apk update
+   3 apk add git
+   4 git clone https://github.com/spurin/cmatrix.git
+   5 ls
+   6 cd matrix
+   7 cd cmatrix/
+   8 ls -l
+   9 autoreconf -i
+  10 apk add autoconf
+  11 autoreconf -i
+  12 apk add automake
+  13 autoreconf -i
+  14 echo $?
+  15 ./configure LDFLAGS="-static"
+  16 apk add alpine-sdk
+  17 ./configure LDFLAGS="-static"
+  18 apk add ncurses-dev ncurses-static
+  19 mkdir -p /usr/lib/kbd/consolefonts /usr/share/consolefonts
+  20 ./configure LDFLAGS="-static"
+  21 make
+  22 ls -l ./cmatrix
+  23 ./cmatrix
+  24 history
