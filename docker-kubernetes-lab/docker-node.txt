@@ -1,0 +1,11 @@
+docker ps -a
+docker ps
+docker stats
+
+docker images
+docker run node:latest
+docker stop node
+docker restart node
+docker run node
+docker rm node
+docker run -it node
