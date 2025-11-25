@@ -1,0 +1,14 @@
+for VARIABLE_NAME in 
+do
+    command 0
+    command 1
+    command 2
+done
+
+# Example:
+#!/bin/bash
+for COLOR in red green blue
+do
+    echo "COLOR: $COLOR"
+    echo "COLOR: `COLOR`
+done
