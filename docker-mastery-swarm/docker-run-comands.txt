@@ -1,0 +1,24 @@
+==============================================
+# Basic Commands #
+==============================================
+
+docker container run --publish 5000:80 nginx
+docker run -p 5000:80 nginx
+
+docker container run --publish 6000:80 --detach --name webhost nginx
+
+docker ps --all
+docker ps -a
+
+docker container stop 698 45a 
+docker stop 698 45a
+
+docker rm webhost
+docker rm 698 45a
+
+docker container ls
+docker container ls -a
+
+# Logs
+docker container logs webhost
+docker logs webhost
