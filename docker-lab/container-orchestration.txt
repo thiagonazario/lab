@@ -1,0 +1,27 @@
+# container orchestration - docker swarm
+
+docker service create --replicas=100 nodejs
+
+# Docker swarm
+
+## swarm manager
+docker swarm init
+
+## node worker 1
+docker swarm join --token <token>
+
+## node worker 2
+docker swarm join --token <token>
+
+## node worker 3
+docker swarm join --token <token>
+
+
+### Docker Service
+Create a webserver:
+docker run my-web-server
+
+Create a worker nodes:
+docker service create --replicas=3 my-web-server
+
+docker service create --replicas=3 --network frontend my-web-server
