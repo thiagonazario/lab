@@ -1,0 +1,16 @@
+docker run --name mongo -d mongo
+
+docker top mongo
+docker top
+docker ps -a
+
+ps aux # searching for mongo on PID list
+
+docker stop mongo
+docker ps
+docker top mongo
+
+ps aux | grep mongo
+
+docker start mongo
+docker stop mongo

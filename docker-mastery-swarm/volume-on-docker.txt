@@ -1,0 +1,27 @@
+docker volume ls
+docker volume --help
+docker run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True mysql
+docker ps -a
+
+docker inspect mysql
+procure por volumes e encontrará, com o docker rodando o container, em 2 locais, no mount e em Volume (/var/lib/mysql)
+
+# Listando os volumes
+docker volume ls
+
+# Resultado
+DRIVER    VOLUME NAME
+local     0e4fd66085eddab78ad1507f775bd5881c35f25dff06a702e262714c199f6161
+
+# Inspecionado
+docker volume inspect 0e4fd66085eddab78ad1507f775bd5881c35f25dff06a702e262714c199f6161
+
+# Agora podemos deletar o container no qual o volume foi criado, mas o volume persistirá!
+docker stop
+
+# Criando um novo, mas agora com caminho para persistência dos dados
+docker run -d --name mysql2 -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mys
+ql mysql
+
+# Usando docker volume create
+docker volume create --help
