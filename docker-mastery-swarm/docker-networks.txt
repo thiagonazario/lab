@@ -1,0 +1,9 @@
+# Docker Networks
+
+docker container run -p
+docker container port <container>
+
+Melhor maneira de inspecionar é 
+docker ps
+
+Virtual networks usam o conceito de bridges ou  docker0

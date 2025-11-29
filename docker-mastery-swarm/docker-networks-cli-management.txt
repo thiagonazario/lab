@@ -1,0 +1,14 @@
+# show networks
+
+docker network ls
+docker network inspect
+
+# create a network:
+docker network create --driver
+
+# connect or disconnect
+docker network connect/disconnect
+
+# criando e verificando
+docker network create my_app_net
+docker network ls
