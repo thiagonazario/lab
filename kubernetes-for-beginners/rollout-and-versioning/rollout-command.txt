@@ -1,0 +1,12 @@
+kubectl rollout status deployment/myapp-deployment
+kubectl rollout history deployment/myapp-deployment
+
+# Podemos ainda reverter todo o deploy feito anteriormente, caso desejado.
+## Usar o comando:
+
+k rollout undo deployment myapp-deployment # retorna ao estado anterior do deployment
+
+
+Recreate or RollingUpdate method strategy?
+
+
