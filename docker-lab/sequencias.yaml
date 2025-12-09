@@ -1,0 +1,16 @@
+roles:
+  - webserver
+  - database
+
+
+# tipo 1
+payload1:
+  - bitcoin
+  - ethereum
+
+# tipo 2
+payload2: [ bitcoin, ethereum ]
+
+nome
+thiago
+nazario
