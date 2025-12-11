@@ -1,0 +1,31 @@
+host: geek
+datacenter:
+  location: São Paulo
+  # recomendação: caso os números não sejam utilizados
+  # para cálculos, informe-os como strings (ex.: "42", '34')
+  router: 42 
+  switch: 34  
+roles:
+  - webserver
+  - database
+
+# exemplo de valor escalar de múltiplas linhas
+# o pipe (|) indica para respeitar o conteúdo e as linhas
+funcionamento: |
+  segunda -  8:00 às 17:00
+  terça   -  8:00 às 17:00
+  quarta  -  8:00 às 17:00
+  quinta  -  8:00 às 17:00
+  sexta   -  8:00 às 17:00
+
+# outro exemplo de valor escalar de múltiplas linhas
+# neste exemplo (>) ele não respeitará as linhas e
+# apresentará tudo em uma única linha
+comentarios: >
+  temos alto uso de CPU
+  desde 04/10/2025
+  estamos investigando
+
+    # inserindo autor do comentário
+    felicity jones
+    felicity@jones.com
