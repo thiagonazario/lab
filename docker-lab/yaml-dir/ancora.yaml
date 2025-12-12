@@ -1,0 +1,12 @@
+---
+# usando & para salvar a variável
+host: geek
+datacenter:
+  location: &SP São Paulo
+---
+# com * copia a variável
+host: geek2
+datacenter:
+  location: *SP
+---
+
