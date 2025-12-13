@@ -1,0 +1,7 @@
+### Usar --dry-run=client -o yaml
+
+kubectl create deployment test --image=nginx --replicas=2 --dry-run=client -o yaml
+
+kubectl create deployment test --image=nginx --replicas=2 --dry-run=client -o yaml > test.yaml
+
+kubectl create service clusterip test --tcp=80:80 --dry-run=client -o yaml
